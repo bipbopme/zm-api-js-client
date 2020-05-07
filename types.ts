@@ -34,7 +34,8 @@ export enum ActionOps {
 	move = 'move',
 	spam = 'spam',
 	unspam = '!spam',
-	trash = 'trash'
+	trash = 'trash',
+	recover = 'recover'
 }
 
 export enum _MessageActionOps {
