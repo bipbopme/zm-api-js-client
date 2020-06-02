@@ -131,6 +131,7 @@ import {
 	GetSMimePublicCertsOptions,
 	LoginOptions,
 	ModifyProfileImageOptions,
+	NoOpOptions,
 	RecoverAccountOptions,
 	RelatedContactsOptions,
 	ResetPasswordOptions,
@@ -1236,7 +1237,15 @@ export class ZimbraBatchClient {
 			singleRequest: true
 		});
 
-	public noop = () => this.jsonRequest({ name: 'NoOp' }).then(Boolean);
+	public noop = ({ wait, limitToOneBlocked }: NoOpOptions) =>
+		this.jsonRequest({
+			name: 'NoOp',
+			body: {
+				wait,
+				limitToOneBlocked
+			},
+			singleRequest: true
+		}).then(Boolean);
 
 	public recoverAccount = ({ channel, email, op }: RecoverAccountOptions) =>
 		this.jsonRequest({

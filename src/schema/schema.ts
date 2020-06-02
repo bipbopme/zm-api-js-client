@@ -67,6 +67,7 @@ import {
 	GetSMimePublicCertsOptions,
 	LoginOptions,
 	ModifyProfileImageOptions,
+	NoOpOptions,
 	RecoverAccountOptions,
 	RelatedContactsOptions,
 	ResetPasswordOptions,
@@ -176,7 +177,7 @@ export function createZimbraSchema(
 				getDataSources: client.getDataSources,
 				getIdentities: client.getIdentities,
 				getSignatures: client.getSignatures,
-				noop: client.noop,
+				noop: (_, variables) => client.noop(variables as NoOpOptions),
 				recoverAccount: (_, variables) =>
 					client.recoverAccount(variables as RecoverAccountOptions),
 				relatedContacts: (_, variables) =>

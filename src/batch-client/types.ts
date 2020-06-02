@@ -313,3 +313,8 @@ export interface ApplyFilterRulesOptions {
 	filterRules: Array<FilterRule>;
 	ids: string;
 }
+
+export interface NoOpOptions {
+	limitToOneBlocked: number;
+	wait: number;
+}

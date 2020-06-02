@@ -3321,6 +3321,18 @@ export type QueryGetWorkingHoursArgs = {
  * - [[SOAP Documentation]](https://github.com/Zimbra/zm-mailbox/blob/develop/store/docs/soap.txt)
  * - [[SOAP XML-to-JSON Documentation]](https://wiki.zimbra.com/wiki/Json_format_to_represent_soap)
  */
+export type QueryNoopArgs = {
+  wait?: Maybe<Scalars['Int']>,
+  limitToOneBlocked?: Maybe<Scalars['Int']>
+};
+
+
+/** 
+ * Zimbra GraphQL Queries
+ * - [[SOAP API Reference]](https://files.zimbra.com/docs/soap_api/8.7.11/api-reference/index.html)
+ * - [[SOAP Documentation]](https://github.com/Zimbra/zm-mailbox/blob/develop/store/docs/soap.txt)
+ * - [[SOAP XML-to-JSON Documentation]](https://wiki.zimbra.com/wiki/Json_format_to_represent_soap)
+ */
 export type QueryRecoverAccountArgs = {
   op: RecoverAccountOp;
   email: Scalars['String'];

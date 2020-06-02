@@ -2926,7 +2926,7 @@ type Query {
 	getTrustedDevices: GetTrustedDevicesResponse
 	getWhiteBlackList: WhiteBlackList
 	getWorkingHours(names: [String!]!, start: Float, end: Float): [WorkingHours]
-	noop: Boolean
+	noop(wait: Int, limitToOneBlocked: Int): Boolean
 	getPreferences: Preferences
 	getDataSources: DataSources!
 	getIdentities: Identities
