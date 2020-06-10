@@ -1697,6 +1697,10 @@ export type IdentityAttrs = {
   zimbraPrefReplyToDisplay?: Maybe<Scalars['String']>;
   zimbraPrefReplyToEnabled?: Maybe<Scalars['Boolean']>;
   zimbraPrefSentMailFolder?: Maybe<Scalars['String']>;
+  zimbraPrefWhenInFolderIds?: Maybe<Scalars['String']>;
+  zimbraPrefWhenInFoldersEnabled?: Maybe<Scalars['Boolean']>;
+  zimbraPrefWhenSentToAddresses?: Maybe<Scalars['String']>;
+  zimbraPrefWhenSentToEnabled?: Maybe<Scalars['Boolean']>;
 };
 
 export type IdentityAttrsInput = {
@@ -1713,6 +1717,10 @@ export type IdentityAttrsInput = {
   zimbraPrefReplyToDisplay?: Maybe<Scalars['String']>;
   zimbraPrefReplyToEnabled?: Maybe<Scalars['Boolean']>;
   zimbraPrefSentMailFolder?: Maybe<Scalars['String']>;
+  zimbraPrefWhenInFolderIds?: Maybe<Scalars['String']>;
+  zimbraPrefWhenInFoldersEnabled?: Maybe<Scalars['Boolean']>;
+  zimbraPrefWhenSentToAddresses?: Maybe<Scalars['String']>;
+  zimbraPrefWhenSentToEnabled?: Maybe<Scalars['Boolean']>;
 };
 
 export enum Importance {
