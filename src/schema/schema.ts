@@ -177,7 +177,8 @@ export function createZimbraSchema(
 				getDataSources: client.getDataSources,
 				getIdentities: client.getIdentities,
 				getSignatures: client.getSignatures,
-				noop: (_, variables) => client.noop(variables as NoOpOptions),
+				noop: (_, variables, context = {}) =>
+					client.noop(variables as NoOpOptions, context.fetchOptions),
 				recoverAccount: (_, variables) =>
 					client.recoverAccount(variables as RecoverAccountOptions),
 				relatedContacts: (_, variables) =>

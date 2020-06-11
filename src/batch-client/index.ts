@@ -1237,14 +1237,15 @@ export class ZimbraBatchClient {
 			singleRequest: true
 		});
 
-	public noop = ({ wait, limitToOneBlocked }: NoOpOptions) =>
+	public noop = ({ wait, limitToOneBlocked }: NoOpOptions, fetchOptions: any) =>
 		this.jsonRequest({
 			name: 'NoOp',
 			body: {
 				wait,
 				limitToOneBlocked
 			},
-			singleRequest: true
+			singleRequest: true,
+			fetchOptions
 		}).then(Boolean);
 
 	public recoverAccount = ({ channel, email, op }: RecoverAccountOptions) =>
