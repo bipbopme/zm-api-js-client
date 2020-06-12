@@ -93,7 +93,7 @@ export interface SOAPHeader {
 			voidOnExpired: boolean;
 		};
 		csrfToken?: string;
-		jwtToken?: {
+		authToken?: {
 			_content: string;
 		};
 		notify?: {

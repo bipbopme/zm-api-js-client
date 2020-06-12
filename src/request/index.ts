@@ -232,7 +232,7 @@ export function jsonRequest(
 	}
 
 	if (requestOptions.jwtToken) {
-		header.context.jwtToken = {
+		header.context.authToken = {
 			_content: requestOptions.jwtToken
 		};
 	}
