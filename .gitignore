@@ -1,6 +1,5 @@
 !package-lock.json
 build
-dist
 node_modules
 /npm-debug.log
 .DS_Store
